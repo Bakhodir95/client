@@ -1,4 +1,7 @@
 import 'package:client/utils/app_constants/app_colors.dart';
+import 'package:client/views/screens/about_virus_screen.dart';
+import 'package:client/views/screens/diagnosis_screen.dart';
+import 'package:client/views/screens/profile_screen.dart';
 import 'package:client/views/widgets/underline.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -16,25 +19,31 @@ class MainScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              children: [
-                SizedBox(
-                  width: 34.w,
-                  height: 34.h,
-                  child: CircleAvatar(
-                    child: Image.asset("assets/images/profile.png"),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (ctx) => ProfileScreen()));
+              },
+              child: Row(
+                children: [
+                  SizedBox(
+                    width: 34.w,
+                    height: 34.h,
+                    child: CircleAvatar(
+                      child: Image.asset("assets/images/profile.png"),
+                    ),
                   ),
-                ),
-                const Gap(5),
-                Text(
-                  "Khatamov Nuriddin",
-                  style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    fontSize: 16.sp,
-                    color: AppColors.lightBlack,
+                  const Gap(5),
+                  Text(
+                    "Khatamov Nuriddin",
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 16.sp,
+                      color: AppColors.lightBlack,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
             const Gap(5),
             Container(
@@ -123,21 +132,29 @@ class MainScreen extends StatelessWidget {
                 Positioned(
                     right: 20,
                     bottom: 25,
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Text(
-                          "To’liq o’qish",
-                          style: TextStyle(
-                              color: AppColors.whiteGrey3,
-                              fontWeight: FontWeight.w400,
-                              fontSize: 12),
-                        ),
-                        Icon(
-                          Icons.keyboard_arrow_right_sharp,
-                          color: AppColors.whiteGrey3,
-                        )
-                      ],
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (ctx) => const AboutVirusScreen()));
+                      },
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(
+                            "To’liq o’qish",
+                            style: TextStyle(
+                                color: AppColors.whiteGrey3,
+                                fontWeight: FontWeight.w400,
+                                fontSize: 12),
+                          ),
+                          Icon(
+                            Icons.keyboard_arrow_right_sharp,
+                            color: AppColors.whiteGrey3,
+                          )
+                        ],
+                      ),
                     )),
                 Positioned(
                   top: -30.h,
@@ -170,18 +187,57 @@ class MainScreen extends StatelessWidget {
                   left: 12, right: 12, top: 15, bottom: 12.5),
               alignment: Alignment.center,
               width: double.infinity,
-              height: 147.h,
+              height: 210.h,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 color: AppColors.background3,
               ),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  SvgPicture.asset("assets/svgs/calendar.svg"),
-                  ListView.builder(
-                    itemBuilder: (context, index) {},
-                  )
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      SvgPicture.asset("assets/svgs/calendar.svg"),
+                      const Gap(9),
+                      Wrap(
+                        spacing: 8.0,
+                        runSpacing: 8.0,
+                        children: List.generate(35, (index) {
+                          if (index >= 31) {
+                            return Container(
+                              width: 38,
+                              height: 30,
+                              decoration: BoxDecoration(
+                                color: AppColors.greyContainer,
+                                borderRadius: BorderRadius.circular(4),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  '${index - 30}',
+                                  style: const TextStyle(fontSize: 12),
+                                ),
+                              ),
+                            );
+                          }
+                          return Container(
+                            width: 38,
+                            height: 30,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(4),
+                            ),
+                            child: Center(
+                              child: Text(
+                                '${index + 1}',
+                                style: const TextStyle(fontSize: 12),
+                              ),
+                            ),
+                          );
+                        }),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
@@ -203,7 +259,7 @@ class MainScreen extends StatelessWidget {
                   left: 12, right: 12, top: 15, bottom: 12.5),
               alignment: Alignment.center,
               width: double.infinity,
-              height: 147.h,
+              height: 132.h,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 color: AppColors.whiteGreen,
@@ -212,29 +268,37 @@ class MainScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const Text(
-                        "6-Oktabr 2024",
-                        style: TextStyle(
-                            fontSize: 12, fontWeight: FontWeight.w300),
-                      ),
-                      Row(
-                        children: [
-                          const Text(
-                            "O’pka shamollashi",
-                            style: TextStyle(
-                                fontSize: 12, fontWeight: FontWeight.w300),
-                          ),
-                          const Gap(8),
-                          SizedBox(
-                              width: 26,
-                              height: 20,
-                              child: Image.asset("assets/images/visible.png"))
-                        ],
-                      ),
-                    ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (ctx) => const DiagnosisScreen()));
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const Text(
+                          "6-Oktabr 2024",
+                          style: TextStyle(
+                              fontSize: 12, fontWeight: FontWeight.w300),
+                        ),
+                        Row(
+                          children: [
+                            const Text(
+                              "O’pka shamollashi",
+                              style: TextStyle(
+                                  fontSize: 12, fontWeight: FontWeight.w300),
+                            ),
+                            const Gap(8),
+                            SizedBox(
+                                width: 26,
+                                height: 20,
+                                child: Image.asset("assets/images/visible.png"))
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                   const Underline(),
                   Row(

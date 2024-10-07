@@ -9,9 +9,11 @@ class AppColors {
   static Color whiteGrey = const Color.fromRGBO(36, 36, 36, 0.85);
   static Color whiteGrey2 = const Color.fromRGBO(0, 0, 0, 0.4);
   static Color whiteGrey3 = const Color.fromRGBO(0, 0, 0, 0.5);
+  static Color whiteGrey4 = const Color.fromRGBO(0, 126, 133, 0.08);
 
   static Color whiteGreen = const Color.fromRGBO(0, 126, 133, 0.1);
   static Color whiteGreen2 = const Color.fromRGBO(0, 126, 133, 0.2);
+  static Color greyContainer = const Color.fromRGBO(255, 255, 255, 0.3);
 
   static const Color lightBlack = Color.fromRGBO(27, 27, 27, 0.74);
   static const Color whiteBlack = Color.fromRGBO(51, 51, 51, 0.9);

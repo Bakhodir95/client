@@ -1,6 +1,5 @@
 import 'package:client/utils/app_constants/app_colors.dart';
 import 'package:client/views/screens/main_screen.dart';
-import 'package:client/views/screens/sign_up_screen.dart';
 import 'package:client/views/widgets/custom_textfield.dart';
 import 'package:client/views/widgets/universal_button_widget.dart';
 import 'package:flutter/material.dart';
