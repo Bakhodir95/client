@@ -1,5 +1,7 @@
 import 'package:client/utils/app_constants/app_colors.dart';
+import 'package:client/views/screens/change_info_screen.dart';
 import 'package:client/views/screens/language_screen.dart';
+import 'package:client/views/screens/sign_up_screen.dart';
 import 'package:client/views/widgets/universal_button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -38,7 +40,10 @@ class ProfileScreen extends StatelessWidget {
                 ),
               ),
               UniversalButtonWidget(
-                function: () {},
+                function: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (ctx) => ChangeInfoScreen()));
+                },
                 color: null,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -118,7 +123,10 @@ class ProfileScreen extends StatelessWidget {
               ),
               const Gap(6),
               UniversalButtonWidget(
-                function: () {},
+                function: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (ctx) => SignUpScreen()));
+                },
                 color: AppColors.darkBlack,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
