@@ -1,4 +1,6 @@
-import 'package:client/views/screens/sign_in.dart';
+import 'package:client/views/screens/profile_screen.dart';
+import 'package:client/views/screens/sign_up_screen.dart';
+import 'package:client/views/screens/confirmation_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
       designSize: const Size(360, 741),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: SignIn(),
+        home: ProfileScreen(),
       ),
     );
   }
