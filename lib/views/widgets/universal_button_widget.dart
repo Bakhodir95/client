@@ -5,23 +5,25 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class UniversalButtonWidget extends StatelessWidget {
   final VoidCallback function;
   final Widget child;
+  final Color? color;
 
   const UniversalButtonWidget({
     super.key,
     required this.function,
     required this.child,
+    required this.color,
   });
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: 51.h,
+      height: 50.h,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          backgroundColor: AppColors.green,
+          backgroundColor: color ?? AppColors.green,
           foregroundColor: AppColors.white,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(8),
+            borderRadius: BorderRadius.circular(10),
           ),
         ),
         onPressed: function,

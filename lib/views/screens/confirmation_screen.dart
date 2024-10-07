@@ -7,8 +7,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 
 class ConfirmationScreen extends StatelessWidget {
-  const ConfirmationScreen({super.key});
+  ConfirmationScreen({super.key});
 
+  final _textFieldController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -61,8 +62,9 @@ class ConfirmationScreen extends StatelessWidget {
                           color: AppColors.whiteBlack),
                     ),
                   ),
-                  const CustomTextfield(
+                  CustomTextfield(
                     hintText: "SMS kodni kiriting",
+                    controller: _textFieldController,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -80,11 +82,10 @@ class ConfirmationScreen extends StatelessWidget {
               ),
               UniversalButtonWidget(
                 function: () {
-                  Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                          builder: (ctx) => const SignUpScreen()));
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (ctx) => SignUpScreen()));
                 },
+                color: null,
                 child: Text(
                   "Tasdiqlash",
                   style:

@@ -7,7 +7,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 
 class SignUpScreen extends StatelessWidget {
-  const SignUpScreen({super.key});
+  SignUpScreen({super.key});
+
+  final _textFieldController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -60,8 +62,9 @@ class SignUpScreen extends StatelessWidget {
                           color: AppColors.whiteBlack),
                     ),
                   ),
-                  const CustomTextfield(
+                  CustomTextfield(
                     hintText: "Telefon raqam",
+                    controller: _textFieldController,
                   ),
                 ],
               ),
@@ -70,8 +73,9 @@ class SignUpScreen extends StatelessWidget {
                     Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                            builder: (ctx) => const ConfirmationScreen()));
+                            builder: (ctx) => ConfirmationScreen()));
                   },
+                  color: null,
                   child: Text(
                     "SMS yuborish",
                     style:
