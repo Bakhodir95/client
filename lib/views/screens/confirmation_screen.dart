@@ -1,4 +1,3 @@
-import 'package:client/utils/app_constants/app_colors.dart';
 import 'package:client/utils/fonts/fonts.dart';
 import 'package:client/views/screens/main_screen.dart';
 import 'package:client/views/widgets/custom_textfield.dart';

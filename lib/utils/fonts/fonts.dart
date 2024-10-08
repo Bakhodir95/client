@@ -1,4 +1,3 @@
-import 'package:client/main.dart';
 import 'package:client/utils/app_constants/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

@@ -1,4 +1,3 @@
-import 'package:client/utils/app_constants/app_colors.dart';
 import 'package:client/utils/fonts/fonts.dart';
 import 'package:client/views/widgets/universal_button_widget.dart';
 import 'package:flutter/material.dart';

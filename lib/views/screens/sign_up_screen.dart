@@ -1,4 +1,3 @@
-import 'package:client/utils/app_constants/app_colors.dart';
 import 'package:client/utils/fonts/fonts.dart';
 import 'package:client/views/screens/confirmation_screen.dart';
 import 'package:client/views/widgets/custom_textfield.dart';
@@ -6,7 +5,6 @@ import 'package:client/views/widgets/universal_button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import 'package:gap/gap.dart';
 
