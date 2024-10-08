@@ -4,6 +4,7 @@ import 'package:client/views/widgets/custom_textfield.dart';
 import 'package:client/views/widgets/universal_button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -17,70 +18,80 @@ class SignUpScreen extends StatelessWidget {
       child: Scaffold(
         body: Padding(
           padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 15),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: Stack(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SizedBox(
-                      width: 56.w,
-                      height: 65.h,
-                      child: Image.asset("assets/images/logo.png")),
-                  Gap(6.h),
-                  Text(
-                    "MZI Clinic",
-                    style: TextStyle(
-                        fontWeight: FontWeight.w700,
-                        fontSize: 22.sp,
-                        color: AppColors.lightBlack),
-                  ),
-                ],
-              ),
+              Positioned(
+                  child: SvgPicture.asset("assets/svgs/leftbackground.svg")),
+              Positioned(
+                  bottom: 0,
+                  right: 0,
+                  child: SvgPicture.asset("assets/svgs/bottomright.svg")),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 4),
-                    child: Text(
-                      "Ro’yhatdan o’tish",
-                      style: TextStyle(
-                          fontWeight: FontWeight.w700,
-                          fontSize: 22.sp,
-                          color: AppColors.whiteBlack),
-                    ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SizedBox(
+                          width: 56.w,
+                          height: 65.h,
+                          child: Image.asset("assets/images/logo.png")),
+                      Gap(6.h),
+                      Text(
+                        "MZI Clinic",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w700,
+                            fontSize: 22.sp,
+                            color: AppColors.lightBlack),
+                      ),
+                    ],
                   ),
-                  Gap(9.h),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 4),
-                    child: Text(
-                      "Telefon raqam:",
-                      style: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 12.sp,
-                          color: AppColors.whiteBlack),
-                    ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 4),
+                        child: Text(
+                          "Ro’yhatdan o’tish",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w700,
+                              fontSize: 22.sp,
+                              color: AppColors.whiteBlack),
+                        ),
+                      ),
+                      Gap(9.h),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 4),
+                        child: Text(
+                          "Telefon raqam:",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w400,
+                              fontSize: 12.sp,
+                              color: AppColors.whiteBlack),
+                        ),
+                      ),
+                      CustomTextfield(
+                        hintText: "Telefon raqam",
+                        controller: _textFieldController,
+                      ),
+                    ],
                   ),
-                  CustomTextfield(
-                    hintText: "Telefon raqam",
-                    controller: _textFieldController,
-                  ),
+                  UniversalButtonWidget(
+                      function: () {
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (ctx) => ConfirmationScreen()));
+                      },
+                      color: null,
+                      child: Text(
+                        "SMS yuborish",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w500, fontSize: 15.sp),
+                      ))
                 ],
               ),
-              UniversalButtonWidget(
-                  function: () {
-                    Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(
-                            builder: (ctx) => ConfirmationScreen()));
-                  },
-                  color: null,
-                  child: Text(
-                    "SMS yuborish",
-                    style:
-                        TextStyle(fontWeight: FontWeight.w500, fontSize: 15.sp),
-                  ))
             ],
           ),
         ),

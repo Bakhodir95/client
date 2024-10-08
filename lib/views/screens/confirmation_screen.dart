@@ -4,6 +4,7 @@ import 'package:client/views/widgets/custom_textfield.dart';
 import 'package:client/views/widgets/universal_button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 
 class ConfirmationScreen extends StatelessWidget {
@@ -16,84 +17,94 @@ class ConfirmationScreen extends StatelessWidget {
       child: Scaffold(
         body: Padding(
           padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 15),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SizedBox(
-                      width: 56.w,
-                      height: 65.h,
-                      child: Image.asset("assets/images/logo.png")),
-                  Gap(6.h),
-                  Text(
-                    "MZI Clinic",
-                    style: TextStyle(
-                        fontWeight: FontWeight.w700,
-                        fontSize: 22.sp,
-                        color: AppColors.lightBlack),
-                  ),
-                ],
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Gap(9),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 4),
-                    child: Text(
-                      "Tasdiqlash",
+          child: Stack(clipBehavior: Clip.none, children: [
+           Positioned(
+                right: 5,
+                top: -70,
+                child: SvgPicture.asset("assets/svgs/rightbackground.svg")),
+            Positioned(
+                bottom: 30,
+                left: 0,
+                child: SvgPicture.asset("assets/svgs/bottomleft.svg")),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                        width: 56.w,
+                        height: 65.h,
+                        child: Image.asset("assets/images/logo.png")),
+                    Gap(6.h),
+                    Text(
+                      "MZI Clinic",
                       style: TextStyle(
                           fontWeight: FontWeight.w700,
                           fontSize: 22.sp,
-                          color: AppColors.whiteBlack),
+                          color: AppColors.lightBlack),
                     ),
-                  ),
-                  Gap(4.w),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 4),
-                    child: Text(
-                      "SMS kod:",
-                      style: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 12.sp,
-                          color: AppColors.whiteBlack),
+                  ],
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Gap(9),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 4),
+                      child: Text(
+                        "Tasdiqlash",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w700,
+                            fontSize: 22.sp,
+                            color: AppColors.whiteBlack),
+                      ),
                     ),
-                  ),
-                  CustomTextfield(
-                    hintText: "SMS kodni kiriting",
-                    controller: _textFieldController,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Text(
-                        "Nomerni o’zgartirish",
+                    Gap(4.w),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 4),
+                      child: Text(
+                        "SMS kod:",
                         style: TextStyle(
                             fontWeight: FontWeight.w400,
                             fontSize: 12.sp,
                             color: AppColors.whiteBlack),
                       ),
-                    ],
-                  ),
-                ],
-              ),
-              UniversalButtonWidget(
-                function: () {
-                  Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (ctx) => MainScreen()));
-                },
-                color: null,
-                child: Text(
-                  "Tasdiqlash",
-                  style:
-                      TextStyle(fontWeight: FontWeight.w500, fontSize: 15.sp),
+                    ),
+                    CustomTextfield(
+                      hintText: "SMS kodni kiriting",
+                      controller: _textFieldController,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Text(
+                          "Nomerni o’zgartirish",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w400,
+                              fontSize: 12.sp,
+                              color: AppColors.whiteBlack),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
-              ),
-            ],
-          ),
+                UniversalButtonWidget(
+                  function: () {
+                    Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: (ctx) => MainScreen()));
+                  },
+                  color: null,
+                  child: Text(
+                    "Tasdiqlash",
+                    style:
+                        TextStyle(fontWeight: FontWeight.w500, fontSize: 15.sp),
+                  ),
+                ),
+              ],
+            ),
+          ]),
         ),
       ),
     );

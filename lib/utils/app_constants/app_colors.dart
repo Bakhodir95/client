@@ -20,5 +20,4 @@ class AppColors {
   static const Color whiteBlack = Color.fromRGBO(51, 51, 51, 0.9);
   static const Color textBorederColor = Color.fromRGBO(0, 126, 133, 0.5);
   static const Color background3 = Color.fromRGBO(0, 126, 133, 0.12);
-  static const Color background4 = Color.fromRGBO(0, 126, 133, 0.12);
 }
