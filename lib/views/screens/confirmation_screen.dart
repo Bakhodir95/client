@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ConfirmationScreen extends StatelessWidget {
   ConfirmationScreen({super.key});
@@ -41,6 +42,7 @@ class ConfirmationScreen extends StatelessWidget {
                     Text(
                       "MZI Clinic",
                       style: TextStyle(
+                          fontFamily: GoogleFonts.lexendDeca().fontFamily,
                           fontWeight: FontWeight.w700,
                           fontSize: 22.sp,
                           color: AppColors.lightBlack),
@@ -56,6 +58,7 @@ class ConfirmationScreen extends StatelessWidget {
                       child: Text(
                         "Tasdiqlash",
                         style: TextStyle(
+                            fontFamily: GoogleFonts.lato().fontFamily,
                             fontWeight: FontWeight.w700,
                             fontSize: 22.sp,
                             color: AppColors.whiteBlack),
@@ -67,6 +70,7 @@ class ConfirmationScreen extends StatelessWidget {
                       child: Text(
                         "SMS kod:",
                         style: TextStyle(
+                            fontFamily: GoogleFonts.lato().fontFamily,
                             fontWeight: FontWeight.w400,
                             fontSize: 12.sp,
                             color: AppColors.whiteBlack),
@@ -82,6 +86,7 @@ class ConfirmationScreen extends StatelessWidget {
                         Text(
                           "Nomerni o’zgartirish",
                           style: TextStyle(
+                              fontFamily: GoogleFonts.lato().fontFamily,
                               fontWeight: FontWeight.w400,
                               fontSize: 12.sp,
                               color: AppColors.whiteBlack),
@@ -98,8 +103,10 @@ class ConfirmationScreen extends StatelessWidget {
                   color: null,
                   child: Text(
                     "Tasdiqlash",
-                    style:
-                        TextStyle(fontWeight: FontWeight.w500, fontSize: 15.sp),
+                    style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontFamily: GoogleFonts.lexendTera().fontFamily,
+                        fontSize: 15.sp),
                   ),
                 ),
               ],

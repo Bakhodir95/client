@@ -5,6 +5,8 @@ import 'package:client/views/widgets/universal_button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:google_fonts/google_fonts.dart';
+
 import 'package:gap/gap.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -39,9 +41,11 @@ class SignUpScreen extends StatelessWidget {
                     Text(
                       "MZI Clinic",
                       style: TextStyle(
-                          fontWeight: FontWeight.w700,
-                          fontSize: 22.sp,
-                          color: AppColors.lightBlack),
+                        fontFamily: GoogleFonts.lexendDeca().fontFamily,
+                        fontWeight: FontWeight.w700,
+                        fontSize: 22.sp,
+                        color: AppColors.lightBlack,
+                      ),
                     ),
                   ],
                 ),
@@ -53,6 +57,7 @@ class SignUpScreen extends StatelessWidget {
                       child: Text(
                         "Ro’yhatdan o’tish",
                         style: TextStyle(
+                            fontFamily: GoogleFonts.lato().fontFamily,
                             fontWeight: FontWeight.w700,
                             fontSize: 22.sp,
                             color: AppColors.whiteBlack),
@@ -64,6 +69,7 @@ class SignUpScreen extends StatelessWidget {
                       child: Text(
                         "Telefon raqam:",
                         style: TextStyle(
+                            fontFamily: GoogleFonts.lato().fontFamily,
                             fontWeight: FontWeight.w400,
                             fontSize: 12.sp,
                             color: AppColors.whiteBlack),
@@ -86,7 +92,9 @@ class SignUpScreen extends StatelessWidget {
                     child: Text(
                       "SMS yuborish",
                       style: TextStyle(
-                          fontWeight: FontWeight.w500, fontSize: 15.sp),
+                          fontFamily: GoogleFonts.lexendTera().fontFamily,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 15.sp),
                     ))
               ],
             ),

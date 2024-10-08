@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -43,11 +44,12 @@ class ProfileScreen extends StatelessWidget {
                     child: Image.asset("assets/images/profile.png"),
                   ),
                 ),
-                const Padding(
-                  padding: EdgeInsets.only(top: 8, bottom: 22),
+                Padding(
+                  padding: const EdgeInsets.only(top: 8, bottom: 22),
                   child: Text(
                     "Khatamov Nuriddin",
                     style: TextStyle(
+                        fontFamily: GoogleFonts.lato().fontFamily,
                         fontWeight: FontWeight.w800,
                         fontSize: 24,
                         color: AppColors.whiteBlack),

@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
@@ -38,6 +39,7 @@ class MainScreen extends StatelessWidget {
                   Text(
                     "Khatamov Nuriddin",
                     style: TextStyle(
+                      fontFamily: GoogleFonts.lato().fontFamily,
                       fontWeight: FontWeight.w600,
                       fontSize: 16.sp,
                       color: AppColors.lightBlack,
@@ -61,6 +63,7 @@ class MainScreen extends StatelessWidget {
                   Text(
                     "MZI Clinicga xush kelibsiz!",
                     style: TextStyle(
+                      fontFamily: GoogleFonts.lexend().fontFamily,
                       color: AppColors.white,
                       fontWeight: FontWeight.w700,
                       fontSize: 18.sp,
@@ -69,6 +72,7 @@ class MainScreen extends StatelessWidget {
                   Text(
                     "Bugun 14:00 ga ro’yhatdan o’tgansiz",
                     style: TextStyle(
+                      fontFamily: GoogleFonts.lexend().fontFamily,
                       fontWeight: FontWeight.w700,
                       color: AppColors.white,
                       fontSize: 14.sp,
@@ -83,6 +87,7 @@ class MainScreen extends StatelessWidget {
               child: Text(
                 "Yangiliklar:",
                 style: TextStyle(
+                  fontFamily: GoogleFonts.lato().fontFamily,
                   fontWeight: FontWeight.w400,
                   fontSize: 12.sp,
                   color: AppColors.whiteBlack,
