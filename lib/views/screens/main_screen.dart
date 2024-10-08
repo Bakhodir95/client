@@ -1,6 +1,7 @@
 import 'package:client/utils/app_constants/app_colors.dart';
 import 'package:client/views/screens/about_virus_screen.dart';
 import 'package:client/views/screens/diagnosis_screen.dart';
+import 'package:client/views/screens/employee_register_screen.dart';
 import 'package:client/views/screens/profile_screen.dart';
 import 'package:client/views/widgets/underline.dart';
 import 'package:flutter/material.dart';
@@ -181,64 +182,70 @@ class MainScreen extends StatelessWidget {
                 ),
               ),
             ),
-            Container(
-              clipBehavior: Clip.none,
-              padding: const EdgeInsets.only(
-                  left: 12, right: 12, top: 15, bottom: 12.5),
-              alignment: Alignment.center,
-              width: double.infinity,
-              height: 210.h,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: AppColors.background3,
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      SvgPicture.asset("assets/svgs/calendar.svg"),
-                      const Gap(9),
-                      Wrap(
-                        spacing: 8.0,
-                        runSpacing: 8.0,
-                        children: List.generate(35, (index) {
-                          if (index >= 31) {
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (ctx) => EmployeesScreen()));
+              },
+              child: Container(
+                clipBehavior: Clip.none,
+                padding: const EdgeInsets.only(
+                    left: 12, right: 12, top: 15, bottom: 12.5),
+                alignment: Alignment.center,
+                width: double.infinity,
+                height: 210.h,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: AppColors.background3,
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        SvgPicture.asset("assets/svgs/calendar.svg"),
+                        const Gap(9),
+                        Wrap(
+                          spacing: 8.0,
+                          runSpacing: 8.0,
+                          children: List.generate(35, (index) {
+                            if (index >= 31) {
+                              return Container(
+                                width: 38,
+                                height: 30,
+                                decoration: BoxDecoration(
+                                  color: AppColors.greyContainer,
+                                  borderRadius: BorderRadius.circular(4),
+                                ),
+                                child: Center(
+                                  child: Text(
+                                    '${index - 30}',
+                                    style: const TextStyle(fontSize: 12),
+                                  ),
+                                ),
+                              );
+                            }
                             return Container(
                               width: 38,
                               height: 30,
                               decoration: BoxDecoration(
-                                color: AppColors.greyContainer,
+                                color: Colors.white,
                                 borderRadius: BorderRadius.circular(4),
                               ),
                               child: Center(
                                 child: Text(
-                                  '${index - 30}',
+                                  '${index + 1}',
                                   style: const TextStyle(fontSize: 12),
                                 ),
                               ),
                             );
-                          }
-                          return Container(
-                            width: 38,
-                            height: 30,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(4),
-                            ),
-                            child: Center(
-                              child: Text(
-                                '${index + 1}',
-                                style: const TextStyle(fontSize: 12),
-                              ),
-                            ),
-                          );
-                        }),
-                      ),
-                    ],
-                  ),
-                ],
+                          }),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
             const Gap(16),

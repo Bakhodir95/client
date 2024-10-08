@@ -1,6 +1,4 @@
-import 'package:client/views/screens/profile_screen.dart';
 import 'package:client/views/screens/sign_up_screen.dart';
-import 'package:client/views/screens/confirmation_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
