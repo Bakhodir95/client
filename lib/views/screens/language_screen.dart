@@ -18,18 +18,18 @@ class LanguageScreen extends StatelessWidget {
             },
             icon: const Icon(Icons.arrow_back_ios_new_outlined)),
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 15),
-        child: Stack(clipBehavior: Clip.none, children: [
-         Positioned(
-                right: 5,
-                top: -70,
-                child: SvgPicture.asset("assets/svgs/rightbackground.svg")),
-            Positioned(
-                bottom: 30,
-                left: 0,
-                child: SvgPicture.asset("assets/svgs/bottomleft.svg")),
-          Column(
+      body: Stack(clipBehavior: Clip.none, children: [
+        Positioned(
+            right: 5,
+            top: -50,
+            child: SvgPicture.asset("assets/svgs/rightbackground.svg")),
+        Positioned(
+            bottom: 30,
+            left: 1,
+            child: SvgPicture.asset("assets/svgs/bottomleft.svg")),
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 15),
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
@@ -66,8 +66,8 @@ class LanguageScreen extends StatelessWidget {
                   )),
             ],
           ),
-        ]),
-      ),
+        ),
+      ]),
     );
   }
 }

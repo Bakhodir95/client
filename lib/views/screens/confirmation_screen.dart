@@ -15,18 +15,18 @@ class ConfirmationScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 15),
-          child: Stack(clipBehavior: Clip.none, children: [
-           Positioned(
-                right: 5,
-                top: -70,
-                child: SvgPicture.asset("assets/svgs/rightbackground.svg")),
-            Positioned(
-                bottom: 30,
-                left: 0,
-                child: SvgPicture.asset("assets/svgs/bottomleft.svg")),
-            Column(
+        body: Stack(children: [
+          Positioned(
+              right: 5,
+              top: 0,
+              child: SvgPicture.asset("assets/svgs/rightbackground.svg")),
+          Positioned(
+              bottom: 0,
+              left: 0,
+              child: SvgPicture.asset("assets/svgs/bottomleft.svg")),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 15),
+            child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -104,8 +104,8 @@ class ConfirmationScreen extends StatelessWidget {
                 ),
               ],
             ),
-          ]),
-        ),
+          ),
+        ]),
       ),
     );
   }

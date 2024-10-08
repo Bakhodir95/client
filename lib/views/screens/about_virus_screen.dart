@@ -26,11 +26,11 @@ class _AboutVirusScreenState extends State<AboutVirusScreen> {
         padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 15),
         child: Stack(clipBehavior: Clip.none, children: [
           Positioned(
-              right: 5,
+              right: 0,
               top: -70,
               child: SvgPicture.asset("assets/svgs/rightbackground.svg")),
           Positioned(
-              bottom: 30,
+              bottom: -30,
               left: 0,
               child: SvgPicture.asset("assets/svgs/bottomleft.svg")),
           Column(

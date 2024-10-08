@@ -22,18 +22,18 @@ class ProfileScreen extends StatelessWidget {
             icon: const Icon(Icons.arrow_back_ios_new_outlined)),
       ),
       body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(15),
-          child: Stack(clipBehavior: Clip.none, children: [
-            Positioned(
-                right: 5,
-                top: -70,
-                child: SvgPicture.asset("assets/svgs/rightbackground.svg")),
-            Positioned(
-                bottom: 30,
-                left: 0,
-                child: SvgPicture.asset("assets/svgs/bottomleft.svg")),
-            Column(
+        child: Stack(clipBehavior: Clip.none, children: [
+          Positioned(
+              right: 15,
+              top: -50,
+              child: SvgPicture.asset("assets/svgs/rightbackground.svg")),
+          Positioned(
+              bottom: 40,
+              left: 0,
+              child: SvgPicture.asset("assets/svgs/bottomleft.svg")),
+          Padding(
+            padding: const EdgeInsets.all(15),
+            child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SizedBox(
@@ -167,8 +167,8 @@ class ProfileScreen extends StatelessWidget {
                 ),
               ],
             ),
-          ]),
-        ),
+          ),
+        ]),
       ),
     );
   }
