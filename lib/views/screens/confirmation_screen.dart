@@ -1,4 +1,5 @@
 import 'package:client/utils/app_constants/app_colors.dart';
+import 'package:client/utils/fonts/fonts.dart';
 import 'package:client/views/screens/main_screen.dart';
 import 'package:client/views/widgets/custom_textfield.dart';
 import 'package:client/views/widgets/universal_button_widget.dart';
@@ -39,14 +40,7 @@ class ConfirmationScreen extends StatelessWidget {
                         height: 65.h,
                         child: Image.asset("assets/images/logo.png")),
                     Gap(6.h),
-                    Text(
-                      "MZI Clinic",
-                      style: TextStyle(
-                          fontFamily: GoogleFonts.lexendDeca().fontFamily,
-                          fontWeight: FontWeight.w700,
-                          fontSize: 22.sp,
-                          color: AppColors.lightBlack),
-                    ),
+                    Text("MZI Clinic", style: CustomFonts.lexendDeca)
                   ],
                 ),
                 Column(
@@ -55,26 +49,12 @@ class ConfirmationScreen extends StatelessWidget {
                     const Gap(9),
                     Padding(
                       padding: const EdgeInsets.only(left: 4),
-                      child: Text(
-                        "Tasdiqlash",
-                        style: TextStyle(
-                            fontFamily: GoogleFonts.lato().fontFamily,
-                            fontWeight: FontWeight.w700,
-                            fontSize: 22.sp,
-                            color: AppColors.whiteBlack),
-                      ),
+                      child: Text("Tasdiqlash", style: CustomFonts.lato80024),
                     ),
                     Gap(4.w),
                     Padding(
                       padding: const EdgeInsets.only(left: 4),
-                      child: Text(
-                        "SMS kod:",
-                        style: TextStyle(
-                            fontFamily: GoogleFonts.lato().fontFamily,
-                            fontWeight: FontWeight.w400,
-                            fontSize: 12.sp,
-                            color: AppColors.whiteBlack),
-                      ),
+                      child: Text("SMS kod:", style: CustomFonts.lato400),
                     ),
                     CustomTextfield(
                       hintText: "SMS kodni kiriting",
@@ -83,14 +63,8 @@ class ConfirmationScreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        Text(
-                          "Nomerni o’zgartirish",
-                          style: TextStyle(
-                              fontFamily: GoogleFonts.lato().fontFamily,
-                              fontWeight: FontWeight.w400,
-                              fontSize: 12.sp,
-                              color: AppColors.whiteBlack),
-                        ),
+                        Text("Nomerni o’zgartirish",
+                            style: CustomFonts.lexendTera),
                       ],
                     ),
                   ],

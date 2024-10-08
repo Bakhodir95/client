@@ -1,4 +1,5 @@
 import 'package:client/utils/app_constants/app_colors.dart';
+import 'package:client/utils/fonts/fonts.dart';
 import 'package:client/views/screens/change_info_screen.dart';
 import 'package:client/views/screens/language_screen.dart';
 import 'package:client/views/screens/sign_up_screen.dart';
@@ -46,14 +47,8 @@ class ProfileScreen extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 8, bottom: 22),
-                  child: Text(
-                    "Khatamov Nuriddin",
-                    style: TextStyle(
-                        fontFamily: GoogleFonts.lato().fontFamily,
-                        fontWeight: FontWeight.w800,
-                        fontSize: 24,
-                        color: AppColors.whiteBlack),
-                  ),
+                  child:
+                      Text("Khatamov Nuriddin", style: CustomFonts.lato80024),
                 ),
                 UniversalButtonWidget(
                   function: () {
@@ -69,11 +64,7 @@ class ProfileScreen extends StatelessWidget {
                       Expanded(
                         child: Text(
                           "Ma’lumotlarni o’zgartirish",
-                          style: TextStyle(
-                            fontSize: 14.sp,
-                            fontWeight: FontWeight.w500,
-                            color: AppColors.white,
-                          ),
+                          style: CustomFonts.lexendTera,
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -99,11 +90,7 @@ class ProfileScreen extends StatelessWidget {
                       Expanded(
                         child: Text(
                           "Tilni o’zgartirish",
-                          style: TextStyle(
-                            fontSize: 14.sp,
-                            fontWeight: FontWeight.w500,
-                            color: AppColors.white,
-                          ),
+                          style: CustomFonts.lexendTera,
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -124,11 +111,7 @@ class ProfileScreen extends StatelessWidget {
                       Expanded(
                         child: Text(
                           "Ommaviy offerta",
-                          style: TextStyle(
-                            fontSize: 14.sp,
-                            fontWeight: FontWeight.w500,
-                            color: AppColors.white,
-                          ),
+                          style: CustomFonts.lexendTera,
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -152,11 +135,7 @@ class ProfileScreen extends StatelessWidget {
                       Expanded(
                         child: Text(
                           "Akkauntdan chiqish",
-                          style: TextStyle(
-                            fontSize: 14.sp,
-                            fontWeight: FontWeight.w500,
-                            color: AppColors.white,
-                          ),
+                          style: CustomFonts.lexendTera,
                           textAlign: TextAlign.center,
                         ),
                       ),

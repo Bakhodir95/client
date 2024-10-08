@@ -1,4 +1,5 @@
 import 'package:client/utils/app_constants/app_colors.dart';
+import 'package:client/utils/fonts/fonts.dart';
 import 'package:client/views/widgets/universal_button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -34,18 +35,15 @@ class LanguageScreen extends StatelessWidget {
             children: [
               Text(
                 "Tilni o’zgartirish",
-                style: TextStyle(
-                    fontWeight: FontWeight.w800,
-                    fontSize: 24.sp,
-                    color: AppColors.whiteBlack),
+                style: CustomFonts.lexendTera,
               ),
               Gap(15.h),
               UniversalButtonWidget(
                   function: () {},
                   color: null,
-                  child: const Text(
+                  child: Text(
                     "O’zbek",
-                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+                    style: CustomFonts.lexendTera,
                   )),
               Gap(6.h),
               UniversalButtonWidget(
@@ -53,16 +51,15 @@ class LanguageScreen extends StatelessWidget {
                   color: null,
                   child: Text(
                     "Ruscha",
-                    style:
-                        TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w500),
+                    style: CustomFonts.lexendTera,
                   )),
               const Gap(6),
               UniversalButtonWidget(
                   function: () {},
                   color: null,
-                  child: const Text(
+                  child: Text(
                     "Inglizcha",
-                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+                    style: CustomFonts.lexendTera,
                   )),
             ],
           ),

@@ -1,4 +1,5 @@
 import 'package:client/utils/app_constants/app_colors.dart';
+import 'package:client/utils/fonts/fonts.dart';
 import 'package:client/views/screens/confirmation_screen.dart';
 import 'package:client/views/widgets/custom_textfield.dart';
 import 'package:client/views/widgets/universal_button_widget.dart';
@@ -38,15 +39,7 @@ class SignUpScreen extends StatelessWidget {
                         height: 65.h,
                         child: Image.asset("assets/images/logo.png")),
                     Gap(6.h),
-                    Text(
-                      "MZI Clinic",
-                      style: TextStyle(
-                        fontFamily: GoogleFonts.lexendDeca().fontFamily,
-                        fontWeight: FontWeight.w700,
-                        fontSize: 22.sp,
-                        color: AppColors.lightBlack,
-                      ),
-                    ),
+                    Text("MZI Clinic", style: CustomFonts.lexendDeca),
                   ],
                 ),
                 Column(
@@ -54,26 +47,13 @@ class SignUpScreen extends StatelessWidget {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 4),
-                      child: Text(
-                        "Ro’yhatdan o’tish",
-                        style: TextStyle(
-                            fontFamily: GoogleFonts.lato().fontFamily,
-                            fontWeight: FontWeight.w700,
-                            fontSize: 22.sp,
-                            color: AppColors.whiteBlack),
-                      ),
+                      child: Text("Ro’yhatdan o’tish",
+                          style: CustomFonts.lato80024),
                     ),
                     Gap(9.h),
                     Padding(
                       padding: const EdgeInsets.only(left: 4),
-                      child: Text(
-                        "Telefon raqam:",
-                        style: TextStyle(
-                            fontFamily: GoogleFonts.lato().fontFamily,
-                            fontWeight: FontWeight.w400,
-                            fontSize: 12.sp,
-                            color: AppColors.whiteBlack),
-                      ),
+                      child: Text("Telefon raqam:", style: CustomFonts.lato400),
                     ),
                     CustomTextfield(
                       hintText: "Telefon raqam",
@@ -89,13 +69,7 @@ class SignUpScreen extends StatelessWidget {
                               builder: (ctx) => ConfirmationScreen()));
                     },
                     color: null,
-                    child: Text(
-                      "SMS yuborish",
-                      style: TextStyle(
-                          fontFamily: GoogleFonts.lexendTera().fontFamily,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 15.sp),
-                    ))
+                    child: Text("SMS yuborish", style: CustomFonts.lexendTera))
               ],
             ),
           ),

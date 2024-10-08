@@ -1,4 +1,5 @@
 import 'package:client/utils/app_constants/app_colors.dart';
+import 'package:client/utils/fonts/fonts.dart';
 import 'package:client/views/widgets/custom_textfield.dart';
 import 'package:client/views/widgets/universal_button_widget.dart';
 import 'package:flutter/material.dart';
@@ -36,13 +37,7 @@ class ChangeInfoScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                "Ma’lumotlarni o’zgartirish",
-                style: TextStyle(
-                    fontWeight: FontWeight.w800,
-                    fontSize: 24.sp,
-                    color: AppColors.whiteBlack),
-              ),
+              Text("Ma’lumotlarni o’zgartirish", style: CustomFonts.lato80024),
               const Gap(15),
               Padding(
                 padding: const EdgeInsets.only(left: 4),
@@ -94,8 +89,7 @@ class ChangeInfoScreen extends StatelessWidget {
                   color: null,
                   child: Text(
                     "Tasdiqlash",
-                    style:
-                        TextStyle(fontWeight: FontWeight.w500, fontSize: 15.sp),
+                    style: CustomFonts.lexendTera,
                   ))
             ],
           ),
