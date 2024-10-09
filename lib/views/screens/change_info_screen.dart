@@ -23,78 +23,88 @@ class ChangeInfoScreen extends StatelessWidget {
             },
             icon: const Icon(Icons.arrow_back_ios_new_outlined)),
       ),
-      body: Stack(children: [
-        Positioned(
-            right: 10,
-            top: -50,
-            child: SvgPicture.asset("assets/svgs/rightbackground.svg")),
-        Positioned(
+      body: SingleChildScrollView(
+        child: Stack(children: [
+          Positioned(
+              right: 10,
+              top: -50,
+              child: SvgPicture.asset("assets/svgs/rightbackground.svg")),
+          Positioned(
             bottom: 0,
             left: 0,
-            child: SvgPicture.asset("assets/svgs/bottomleft.svg")),
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 15),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text("Ma’lumotlarni o’zgartirish", style: CustomFonts.lato80024),
-              const Gap(15),
-              Padding(
-                padding: const EdgeInsets.only(left: 4),
-                child: Text(
-                  "Ism:",
-                  style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 12.sp,
-                      color: AppColors.whiteBlack),
-                ),
-              ),
-              CustomTextfield(
-                hintText: "Ism",
-                controller: _firstNameController,
-              ),
-              const Gap(25),
-              Padding(
-                padding: const EdgeInsets.only(left: 4),
-                child: Text(
-                  "Familiya:",
-                  style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 12.sp,
-                      color: AppColors.whiteBlack),
-                ),
-              ),
-              CustomTextfield(
-                hintText: "Familiya",
-                controller: _lastNameController,
-              ),
-              const Gap(25),
-              Padding(
-                padding: const EdgeInsets.only(left: 4),
-                child: Text(
-                  "Telefon raqam:",
-                  style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 12.sp,
-                      color: AppColors.whiteBlack),
-                ),
-              ),
-              CustomTextfield(
-                hintText: "Telefon raqam",
-                controller: _phoneController,
-              ),
-              const Gap(25),
-              UniversalButtonWidget(
-                  function: () {},
-                  color: null,
-                  child: Text(
-                    "Tasdiqlash",
-                    style: CustomFonts.lexendTera,
-                  ))
-            ],
+            child: SizedBox(
+              height: MediaQuery.of(context).size.height,
+              child: SvgPicture.asset("assets/svgs/bottomleft.svg"),
+            ),
           ),
-        ),
-      ]),
+          SizedBox(
+            height: MediaQuery.of(context).size.height,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 15),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text("Ma’lumotlarni o’zgartirish",
+                      style: CustomFonts.lato80024),
+                  const Gap(15),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 4),
+                    child: Text(
+                      "Ism:",
+                      style: TextStyle(
+                          fontWeight: FontWeight.w400,
+                          fontSize: 12.sp,
+                          color: AppColors.whiteBlack),
+                    ),
+                  ),
+                  CustomTextfield(
+                    hintText: "Ism",
+                    controller: _firstNameController,
+                  ),
+                  const Gap(25),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 4),
+                    child: Text(
+                      "Familiya:",
+                      style: TextStyle(
+                          fontWeight: FontWeight.w400,
+                          fontSize: 12.sp,
+                          color: AppColors.whiteBlack),
+                    ),
+                  ),
+                  CustomTextfield(
+                    hintText: "Familiya",
+                    controller: _lastNameController,
+                  ),
+                  const Gap(25),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 4),
+                    child: Text(
+                      "Telefon raqam:",
+                      style: TextStyle(
+                          fontWeight: FontWeight.w400,
+                          fontSize: 12.sp,
+                          color: AppColors.whiteBlack),
+                    ),
+                  ),
+                  CustomTextfield(
+                    hintText: "Telefon raqam",
+                    controller: _phoneController,
+                  ),
+                  const Gap(25),
+                  UniversalButtonWidget(
+                      function: () {},
+                      color: null,
+                      child: Text(
+                        "Tasdiqlash",
+                        style: CustomFonts.lexendTera,
+                      ))
+                ],
+              ),
+            ),
+          ),
+        ]),
+      ),
     );
   }
 }
