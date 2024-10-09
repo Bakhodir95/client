@@ -182,7 +182,7 @@ class EmployeesScreen extends StatelessWidget {
                             onTap: showDialogBusy,
                             child: Container(
                               width: 140.w,
-                              height: 30.h,
+                              height: 25.h,
                               decoration: BoxDecoration(
                                 color: AppColors.greyContainer,
                                 borderRadius: BorderRadius.circular(4.r),
@@ -202,7 +202,7 @@ class EmployeesScreen extends StatelessWidget {
                           onTap: showDialogFree,
                           child: Container(
                               width: 140.w,
-                              height: 30.h,
+                              height: 25.h,
                               decoration: BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(4.r),
@@ -254,7 +254,7 @@ class EmployeesScreen extends StatelessWidget {
                             onTap: showDialogBusy,
                             child: Container(
                               width: 140.w,
-                              height: 30.h,
+                              height: 25.h,
                               decoration: BoxDecoration(
                                 color: AppColors.greyContainer,
                                 borderRadius: BorderRadius.circular(4.r),
@@ -274,7 +274,7 @@ class EmployeesScreen extends StatelessWidget {
                           onTap: showDialogFree,
                           child: Container(
                               width: 140.w,
-                              height: 30.h,
+                              height: 25.h,
                               decoration: BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(4.r),
